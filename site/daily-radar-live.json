@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06 16:15 UTC",
+  "generated_at": "2026-08-14 23:22 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -56,6 +56,13 @@
         "ctx": 131072
       },
       {
+        "id": "inclusionai/ling-3.0-flash",
+        "name": "Ling-3.0-flash",
+        "q": 68,
+        "avg": 0.042,
+        "ctx": 262144
+      },
+      {
         "id": "sao10k/l3-lunaris-8b",
         "name": "Sao10K: Llama 3 8B Lunaris",
         "q": 70,
@@ -63,18 +70,11 @@
         "ctx": 8192
       },
       {
-        "id": "ibm-granite/granite-4.0-h-micro",
-        "name": "IBM: Granite 4.0 Micro",
+        "id": "gryphe/mythomax-l2-13b",
+        "name": "MythoMax 13B",
         "q": 70,
-        "avg": 0.0645,
-        "ctx": 131000
-      },
-      {
-        "id": "mistralai/mistral-small-24b-instruct-2501",
-        "name": "Mistral: Mistral Small 3",
-        "q": 70,
-        "avg": 0.065,
-        "ctx": 32768
+        "avg": 0.06,
+        "ctx": 8192
       }
     ],
     "cheapest": [
@@ -90,6 +90,13 @@
         "name": "Sao10K: Llama 3 8B Lunaris",
         "q": 70,
         "avg": 0.045,
+        "ctx": 8192
+      },
+      {
+        "id": "gryphe/mythomax-l2-13b",
+        "name": "MythoMax 13B",
+        "q": 70,
+        "avg": 0.06,
         "ctx": 8192
       },
       {
@@ -111,13 +118,6 @@
         "name": "Meta: Llama 3.1 8B Instruct",
         "q": 70,
         "avg": 0.065,
-        "ctx": 131072
-      },
-      {
-        "id": "ibm-granite/granite-4.1-8b",
-        "name": "IBM: Granite 4.1 8B",
-        "q": 70,
-        "avg": 0.075,
         "ctx": 131072
       }
     ]
