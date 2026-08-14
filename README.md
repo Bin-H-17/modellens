@@ -1,11 +1,9 @@
 # ModelSieve · 模型筛 / Model Intelligence & Writeback Layer
 
-> **中文**：供应商中立的「模型情报 / 策略顾问层」——不做网关，只做**情报聚合 + 分档推荐 + 写回适配器**。
-> 监测全网模型质量/价格漂移，按任务域给三档推荐，可解释、可回退、零配置。你一问，它就聚合多源情报给你推荐。
+> **中文**：供应商中立的「模型情报 / 策略顾问层」——情报聚合 + 分档推荐 + 写回适配器。
+> 监测全网模型质量/价格漂移，按任务域给三档推荐，可解释、可回退、零配置。
 >
-> **EN**: A vendor-neutral model-intelligence / strategy-advisor layer. Not a gateway — only **intelligence aggregation + tiered recommendation + writeback adapters**. Tracks quality/price drift across the model landscape and recommends three tiers per task; explainable, reversible, zero-config. Ask once, it aggregates multi-source intelligence and recommends.
-
-> **语言导航 · Language**: 本 README 采用逐节中英对照——每节内同时给出中文与 English，无独立语言分区。· This README is interleaved bilingual — every section carries 中文 and English side by side; there are no separate language sections.
+> **EN**: A vendor-neutral model-intelligence / strategy-advisor layer — intelligence aggregation + tiered recommendation + writeback adapters. Tracks quality/price drift across the model landscape and recommends three tiers per task; explainable, reversible, zero-config.
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Live Report](https://img.shields.io/badge/daily%20report-Pages-success)](https://modelsieve.github.io/modellens/)
@@ -14,11 +12,11 @@
 
 ## 为什么存在 · Why it exists
 
-**中文**：过去两年有 **199 次前沿模型发布、300+ 可用模型**，同一任务的有效成本差可达 **30×**。但没有任何一个供应商中立的工具告诉你：今天哪个模型在你的任务上**最优质**？哪个**性价比最高**？哪个**最便宜能兜底**？更没有人把答案**写回**你已在用的工作流（Dify / LangGraph / n8n / otari）。
+**中文**：过去两年有百余款前沿和可用模型发布，同一任务的有效成本差可达 **30×**。但没有任何一个供应商中立的工具告诉你：今天哪个模型在你的任务上**最优质**？哪个**性价比最高**？哪个**最便宜能兜底**？更没有人把答案**写回**你已在用的工作流（Dify / LangGraph / n8n / otari）。
 
-**EN**: In the last two years there were **199 frontier model releases and 300+ usable models**; effective cost for the same task can differ by **30×**. Yet no vendor-neutral tool tells you: which model is **best quality** for your task today? which has the **best value**? which is **cheapest but still works**? And nobody writes the answer back into the workflow you already use (Dify / LangGraph / n8n / otari).
+**EN**: Over the past two years there have been over a hundred frontier and usable model releases; effective cost for the same task can differ by **30×**. Yet no vendor-neutral tool tells you: which model is **best quality** for your task today? which has the **best value**? which is **cheapest but still works**? And nobody writes the answer back into the workflow you already use (Dify / LangGraph / n8n / otari).
 
-**ModelSieve 只做两件事 · ModelSieve does only two things**: ① 情报层（雷达）· intelligence layer (radar)；② 写回适配器 · writeback adapters。网关/路由的 plumbing 直接骑在 [otari](https://github.com/otari-ai/otari)（Apache-2.0）等开源底座上，我们**不重复造网关** · gateway plumbing rides on open-source bases like otari; we **don't rebuild the gateway**.
+**ModelSieve 只做两件事 · ModelSieve does only two things**: ① 情报层（雷达）· intelligence layer (radar)；② 写回适配器 · writeback adapters。网关/路由的 plumbing 直接骑在 [otari](https://github.com/otari-ai/otari)（Apache-2.0）等开源底座上，不重复造网关 · gateway plumbing rides on open-source bases like otari; the gateway is not rebuilt.
 
 ---
 
@@ -46,18 +44,18 @@ OpenRouter /api/v1/models  ──▶  radar/snapshot.py (统一每日入口)  �
 
 - **情报层（开源）· Intelligence (OSS)**：`radar/snapshot.py` 拉取实时价格与（可选）真实质量分，输出三档并缓存快照；`radar/diff.py` 做跨日漂移对比。
 - **写回层（开源）· Writeback (OSS)**：`adapters/{dify,langgraph,n8n,otari}` 把三档映射成各平台 model-config，默认 dry-run，可 `--apply` 实跑。
-- **托管报告（免费）· Hosted report (free)**：GitHub Actions 每日生成 → GitHub Pages 自动更新（CI 已写好，发布待你执行 `launch/LAUNCH.md`）。
-- **推荐技能（开源）· Recommendation skill (OSS)**：`skill/modellens/` —— 你一问，它聚合多源情报（OpenRouter/AA/LMArena/社区）分档推荐，详见下方「按需推荐技能」。
+- **托管报告（免费）· Hosted report (free)**：GitHub Actions 每日生成 → GitHub Pages 自动更新（CI 已写好，发布步骤见 `launch/LAUNCH.md`）。
+- **推荐技能（开源）· Recommendation skill (OSS)**：`skill/modellens/` 聚合多源情报（OpenRouter/AA/LMArena/社区）分档推荐，详见下方「按需推荐技能」。
 
 ---
 
 ## 按需推荐技能 · On-demand recommendation skill
 
-**中文**：`skill/modellens/` 是一个 WorkBuddy 技能。你只要问"推荐个模型 / 哪个性价比最高 / 不考虑钱用哪个"，它就自动去各平台、论坛、权威测试源（价格、Artificial Analysis 智能指数、LMArena 人类偏好、LiveBench、r/LocalLLaMA 等）聚合情报，按档位推荐，并以最易读的形式（表格 + 一句话理由 + 来源链接）呈现。数据源明细见 `skill/modellens/references/sources.md`，输出模板见 `references/output-template.md`。
+**中文**：`skill/modellens/` 是一个推荐技能。用户提出「推荐个模型 / 哪个性价比最高 / 不考虑钱用哪个」时，它自动聚合多平台、论坛与权威测试源（价格、Artificial Analysis 智能指数、LMArena 人类偏好、LiveBench、r/LocalLLaMA 等）的情报，按档位推荐，并以易读形式（表格 + 一句话理由 + 来源链接）呈现。数据源明细见 `skill/modellens/references/sources.md`，输出模板见 `references/output-template.md`。
 
-**EN**: `skill/modellens/` is a WorkBuddy skill. Ask "recommend a model / best value / best regardless of cost" and it auto-aggregates from platforms, forums, and authoritative benchmarks (prices, Artificial Analysis Intelligence Index, LMArena human preference, LiveBench, r/LocalLLaMA…), recommends by tier, and presents in the most readable form (table + one-line rationale + source links). Source details: `skill/modellens/references/sources.md`; output template: `references/output-template.md`.
+**EN**: `skill/modellens/` is a recommendation skill. When asked "recommend a model / best value / best regardless of cost", it aggregates intelligence from platforms, forums, and authoritative benchmarks (prices, Artificial Analysis Intelligence Index, LMArena human preference, LiveBench, r/LocalLLaMA…), recommends by tier, and presents it in a readable form (table + one-line rationale + source links). Source details: `skill/modellens/references/sources.md`; output template: `references/output-template.md`.
 
-**安装 · Install**: 把 `skill/modellens/` 复制到你的 `~/.workbuddy/skills/modellens/`（用户级）或项目 `.workbuddy/skills/modellens/`（项目级）即可。· Copy `skill/modellens/` to `~/.workbuddy/skills/modellens/` (user-level) or `.workbuddy/skills/modellens/` (project-level).
+**安装 · Install**: 把 `skill/modellens/` 复制到所用平台的技能目录（用户级或项目级）即可。· Copy `skill/modellens/` to the skill directory of the platform in use (user-level or project-level).
 
 ---
 
@@ -100,29 +98,8 @@ python radar/visualize.py --out site/drift-chart.svg
 
 ## 质量分说明 · On quality scores
 
-- **中文**：开源版默认使用**启发式质量分层**（基于模型家族/规模的经验估计，**非权威 benchmark**，页面已标注）。接 [Artificial Analysis](https://artificialanalysis.ai/) 真实质量分后，作为 Premium 能力（详见 `docs/quality.md`）。质量分永远可解释、可回退——你随时知道为什么选了某个模型，且能一键改回。
-- **EN**: The OSS build defaults to a **heuristic quality tier** (experience-based on family/scale, **not an authoritative benchmark**, labeled on the page). Real scores from [Artificial Analysis](https://artificialanalysis.ai/) become a Premium capability (see `docs/quality.md`). Scores are always explainable and reversible.
-
----
-
-## 与 otari 的关系 · Relation to otari
-
-**中文**：otari 是 Apache-2.0 的模型路由/网关底座。ModelSieve **不 fork、不竞争**，而是：情报层输出三档 → 通过 otari 的 policy/route 接口写回。我们专注白空间（雷达 + 写回），网关 plumbing 交给成熟开源项目。
-**EN**: otari is an Apache-2.0 routing/gateway base. ModelSieve **doesn't fork or compete** — intelligence outputs three tiers → written back via otari's policy/route interface. We focus on the white space (radar + writeback); gateway plumbing goes to mature OSS.
-
----
-
-## 路线图 · Roadmap
-
-| 阶段 Phase | 内容 Content | 状态 Status |
-|------------|--------------|-------------|
-| P0 | 开源仓库 + 四写回适配器 + 快照/漂移引擎 + 测试 · repo + adapters + drift engine + tests | ✅ 已交付（本地）delivered (local) |
-| P0 | 免费每日报告 (Pages) · free daily report | ⛔ 工程就绪，发布待你（见 `launch/LAUNCH.md`）ready, awaiting you |
-| P0 | 按需推荐技能 · on-demand recommendation skill | ✅ 已交付 delivered |
-| P1 | 接 Artificial Analysis 真实质量分 · real AA quality | 代码就绪，待 key code ready, needs key |
-| P1 | 问卷验证 H1/H2 → 更新 PRD · survey validation | 待人发问卷 awaiting survey |
-| P2 | 任务域细分档位 / 漂移可视化 · task-domain tiers / drift viz | ✅ 已交付 delivered |
-| P2 | 多工作流写回 / 企业中立 SLA · multi-workflow writeback / SLA | 待 traction awaiting traction |
+- **中文**：开源版默认使用**启发式质量分层**（基于模型家族/规模的经验估计，**非权威 benchmark**，页面已标注）。接 [Artificial Analysis](https://artificialanalysis.ai/) 真实质量分后，作为 Premium 能力（详见 `docs/quality.md`）。每个分数都可解释、可回退——选择某个模型的理由随时可查，且能一键改回。
+- **EN**: The OSS build defaults to a **heuristic quality tier** (experience-based on family/scale, **not an authoritative benchmark**, labeled on the page). Real scores from [Artificial Analysis](https://artificialanalysis.ai/) become a Premium capability (see `docs/quality.md`). Every score is explainable and reversible — the rationale for choosing a model can be inspected at any time and reverted in one step.
 
 ---
 
@@ -132,6 +109,6 @@ Apache-2.0，欢迎 PR。重点白空间：新适配器、新数据源、质量�
 
 ## 许可证 · License
 
-[Apache-2.0](LICENSE)（权威文本为英文；中文说明见 [LICENSE.zh.md](LICENSE.zh.md)）。内核永远开源、可审计、可 self-host。· Apache-2.0 (authoritative text in English; Chinese summary in [LICENSE.zh.md](LICENSE.zh.md)). Core stays open, auditable, self-hostable.
+[Apache-2.0](LICENSE)（权威文本为英文；中文说明见 [LICENSE.zh.md](LICENSE.zh.md)）。内核开源、可审计、可 self-host。· Apache-2.0 (authoritative text in English; Chinese summary in [LICENSE.zh.md](LICENSE.zh.md)). Core stays open, auditable, self-hostable.
 
 Copyright (c) 2026 ModelSieve contributors.
