@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>模型筛 · 每日报告</title>
+<style>
+:root{--bg:#0f1220;--card:#1a1f35;--acc:#6c8cff;--txt:#e8ebf5;--mut:#9aa3c0}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);padding:24px}
+header{margin-bottom:20px}
+h1{margin:0 0 6px;font-size:22px}
+header p{color:var(--mut);margin:0;font-size:13px}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.card{background:var(--card);border:1px solid #2a3050;border-radius:14px;padding:16px}
+.tier{font-size:12px;color:var(--acc);font-weight:600;letter-spacing:.5px}
+.model{font-size:18px;font-weight:700;margin:8px 0 6px}
+.prov{font-size:12px;color:var(--mut);font-weight:400}
+.desc{font-size:13px;color:#c7cdec;line-height:1.6}
+section h2{font-size:16px;margin:8px 0 12px}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;font-size:13px;border-bottom:1px solid #2a3050}
+th{color:var(--mut);font-weight:600}
+code{background:#0c0f1c;padding:2px 6px;border-radius:6px;color:#9fd0ff}
+footer{margin-top:22px;color:var(--mut);font-size:12px;line-height:1.7}
+@media(max-width:720px){.tiers{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>📡 模型筛 · 每日最佳配置</h1>
+<p>日期 2026-08-06 ｜ 监控 8 个模型 ｜ 情报层（只读建议）</p></header>
+<section class="tiers"><div class="card"><div class="tier">日常性价比 · 每天主力</div><div class="model">Llama 4 <span class="prov">Meta</span></div><div class="desc">性价比指数 260.0（质量 78 / 输出价 $0.3/M），兼顾质量与成本的最佳平衡。</div></div><div class="card"><div class="tier">最优质 · 只看质量</div><div class="model">Claude Opus 5 <span class="prov">Anthropic</span></div><div class="desc">质量分 92 全池最高，输出价 $75.0/M，不计成本优先质量。</div></div><div class="card"><div class="tier">最划算 · 小/批量</div><div class="model">Llama 4 <span class="prov">Meta</span></div><div class="desc">输出价仅 $0.3/M，质量 78 足以覆盖小/批量任务，批量最划算。</div></div></section>
+<section><h2>分任务域推荐</h2>
+<table><thead><tr><th>任务</th><th>推荐模型</th><th>质量</th><th>理由</th></tr></thead>
+<tbody><tr><td>编码</td><td><code>Claude Opus 5</code></td><td>90</td><td>性价比指数 1.2（质量 92 / 输出价 $75.0/M），兼顾质量与成本的最佳平衡。</td></tr><tr><td>推理</td><td><code>Claude Opus 5</code></td><td>91</td><td>性价比指数 1.2（质量 92 / 输出价 $75.0/M），兼顾质量与成本的最佳平衡。</td></tr><tr><td>翻译</td><td><code>Claude Opus 5</code></td><td>93</td><td>性价比指数 1.2（质量 92 / 输出价 $75.0/M），兼顾质量与成本的最佳平衡。</td></tr><tr><td>摘要</td><td><code>Claude Opus 5</code></td><td>92</td><td>性价比指数 1.2（质量 92 / 输出价 $75.0/M），兼顾质量与成本的最佳平衡。</td></tr><tr><td>长文本</td><td><code>Gemini 2.5 Pro</code></td><td>95</td><td>性价比指数 8.7（质量 87 / 输出价 $10.0/M），兼顾质量与成本的最佳平衡。</td></tr></tbody></table></section>
+<footer>未授权 API：照此手动设置即可；授权后可一键应用并随涨跌更新。每条推荐可解释、可回退。</footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+name: Daily ModelSieve
+
+on:
+  schedule:
+    # 每天 23:00 UTC ≈ 北京 07:00，符合「每天早起看报告」
+    - cron: "0 23 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write          # 回写快照到仓库（历史累积 → 漂移可比）
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Generate report + snapshot
+        env:
+          # 可选：填了就用 Artificial Analysis 真实质量分；不填则启发式降级
+          AA_API_KEY: ${{ secrets.AA_API_KEY }}
+        run: |
+          python radar/snapshot.py \
+            --json site/daily-radar-live.json \
+            --html site/daily-radar-live.html \
+            --md   site/daily-radar-live.md \
+            --aa-key "${AA_API_KEY:-}"
+          cp pages/index.html site/index.html
+
+      - name: Commit snapshots + reports back
+        run: |
+          git config user.name "modellens-bot"
+          git config user.email "modellens@local"
+          git add data/snapshots site
+          git commit -m "daily: $(date -u +%Y-%m-%d)" || echo "no changes"
+          git push
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

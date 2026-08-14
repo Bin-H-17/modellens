@@ -1,0 +1,325 @@
+{
+  "generated_at": "2026-08-06 16:15 UTC",
+  "domain_counts": {
+    "coding": 1,
+    "reasoning": 4,
+    "long-context": 128,
+    "multimodal": 240,
+    "general": 26
+  },
+  "domains": {
+    "coding": {
+      "best_quality": [
+        {
+          "id": "qwen/qwen-2.5-coder-32b-instruct",
+          "name": "Qwen2.5 Coder 32B Instruct",
+          "q": 75,
+          "avg": 0.83,
+          "ctx": 32768
+        }
+      ],
+      "best_value": [
+        {
+          "id": "qwen/qwen-2.5-coder-32b-instruct",
+          "name": "Qwen2.5 Coder 32B Instruct",
+          "q": 75,
+          "avg": 0.83,
+          "ctx": 32768
+        }
+      ],
+      "cheapest": [
+        {
+          "id": "qwen/qwen-2.5-coder-32b-instruct",
+          "name": "Qwen2.5 Coder 32B Instruct",
+          "q": 75,
+          "avg": 0.83,
+          "ctx": 32768
+        }
+      ]
+    },
+    "reasoning": {
+      "best_quality": [
+        {
+          "id": "deepseek/deepseek-r1-distill-llama-70b",
+          "name": "DeepSeek: R1 Distill Llama 70B",
+          "q": 90,
+          "avg": 0.8,
+          "ctx": 8192
+        },
+        {
+          "id": "qwen/qwen3-30b-a3b-thinking-2507",
+          "name": "Qwen: Qwen3 30B A3B Thinking 2507",
+          "q": 75,
+          "avg": 1.3,
+          "ctx": 81920
+        },
+        {
+          "id": "allenai/olmo-3-32b-think",
+          "name": "AllenAI: Olmo 3 32B Think",
+          "q": 70,
+          "avg": 0.325,
+          "ctx": 65536
+        }
+      ],
+      "best_value": [
+        {
+          "id": "sao10k/l3-lunaris-8b",
+          "name": "Sao10K: Llama 3 8B Lunaris",
+          "q": 70,
+          "avg": 0.045,
+          "ctx": 8192
+        },
+        {
+          "id": "allenai/olmo-3-32b-think",
+          "name": "AllenAI: Olmo 3 32B Think",
+          "q": 70,
+          "avg": 0.325,
+          "ctx": 65536
+        },
+        {
+          "id": "deepseek/deepseek-r1-distill-llama-70b",
+          "name": "DeepSeek: R1 Distill Llama 70B",
+          "q": 90,
+          "avg": 0.8,
+          "ctx": 8192
+        }
+      ],
+      "cheapest": [
+        {
+          "id": "sao10k/l3-lunaris-8b",
+          "name": "Sao10K: Llama 3 8B Lunaris",
+          "q": 70,
+          "avg": 0.045,
+          "ctx": 8192
+        },
+        {
+          "id": "allenai/olmo-3-32b-think",
+          "name": "AllenAI: Olmo 3 32B Think",
+          "q": 70,
+          "avg": 0.325,
+          "ctx": 65536
+        },
+        {
+          "id": "deepseek/deepseek-r1-distill-llama-70b",
+          "name": "DeepSeek: R1 Distill Llama 70B",
+          "q": 90,
+          "avg": 0.8,
+          "ctx": 8192
+        }
+      ]
+    },
+    "long-context": {
+      "best_quality": [
+        {
+          "id": "deepseek/deepseek-r1-0528",
+          "name": "DeepSeek: R1 0528",
+          "q": 90,
+          "avg": 1.325,
+          "ctx": 163840
+        },
+        {
+          "id": "deepseek/deepseek-r1",
+          "name": "DeepSeek: R1",
+          "q": 90,
+          "avg": 1.6,
+          "ctx": 163840
+        },
+        {
+          "id": "deepseek/deepseek-v4-pro",
+          "name": "DeepSeek: DeepSeek V4 Pro",
+          "q": 85,
+          "avg": 0.6525,
+          "ctx": 1048576
+        }
+      ],
+      "best_value": [
+        {
+          "id": "inclusionai/ling-2.6-flash",
+          "name": "inclusionAI: Ling-2.6-flash",
+          "q": 68,
+          "avg": 0.02,
+          "ctx": 262144
+        },
+        {
+          "id": "mistralai/mistral-nemo",
+          "name": "Mistral: Mistral Nemo",
+          "q": 70,
+          "avg": 0.0245,
+          "ctx": 131072
+        },
+        {
+          "id": "ibm-granite/granite-4.0-h-micro",
+          "name": "IBM: Granite 4.0 Micro",
+          "q": 70,
+          "avg": 0.0645,
+          "ctx": 131000
+        }
+      ],
+      "cheapest": [
+        {
+          "id": "mistralai/mistral-nemo",
+          "name": "Mistral: Mistral Nemo",
+          "q": 70,
+          "avg": 0.0245,
+          "ctx": 131072
+        },
+        {
+          "id": "ibm-granite/granite-4.0-h-micro",
+          "name": "IBM: Granite 4.0 Micro",
+          "q": 70,
+          "avg": 0.0645,
+          "ctx": 131000
+        },
+        {
+          "id": "meta-llama/llama-3.1-8b-instruct",
+          "name": "Meta: Llama 3.1 8B Instruct",
+          "q": 70,
+          "avg": 0.065,
+          "ctx": 131072
+        }
+      ]
+    },
+    "multimodal": {
+      "best_quality": [
+        {
+          "id": "anthropic/claude-opus-5-fast",
+          "name": "Claude Opus 5 (Fast)",
+          "q": 95,
+          "avg": 30.0,
+          "ctx": 1000000
+        },
+        {
+          "id": "anthropic/claude-opus-5",
+          "name": "Claude Opus 5",
+          "q": 95,
+          "avg": 15.0,
+          "ctx": 1000000
+        },
+        {
+          "id": "anthropic/claude-opus-5:batch",
+          "name": "Claude Opus 5 (batch)",
+          "q": 95,
+          "avg": 7.5,
+          "ctx": 1000000
+        }
+      ],
+      "best_value": [
+        {
+          "id": "google/gemma-3-4b-it",
+          "name": "Google: Gemma 3 4B",
+          "q": 70,
+          "avg": 0.075,
+          "ctx": 131072
+        },
+        {
+          "id": "nex-agi/nex-n2-mini",
+          "name": "Nex AGI: Nex-N2-Mini",
+          "q": 58,
+          "avg": 0.0625,
+          "ctx": 262144
+        },
+        {
+          "id": "qwen/qwen3.7-flash",
+          "name": "Qwen: Qwen3.7 Flash",
+          "q": 70,
+          "avg": 0.08,
+          "ctx": 1000000
+        }
+      ],
+      "cheapest": [
+        {
+          "id": "google/gemma-3-4b-it",
+          "name": "Google: Gemma 3 4B",
+          "q": 70,
+          "avg": 0.075,
+          "ctx": 131072
+        },
+        {
+          "id": "qwen/qwen3.7-flash",
+          "name": "Qwen: Qwen3.7 Flash",
+          "q": 70,
+          "avg": 0.08,
+          "ctx": 1000000
+        },
+        {
+          "id": "rekaai/reka-edge",
+          "name": "Reka Edge",
+          "q": 70,
+          "avg": 0.1,
+          "ctx": 16384
+        }
+      ]
+    },
+    "general": {
+      "best_quality": [
+        {
+          "id": "openai/gpt-4",
+          "name": "OpenAI: GPT-4",
+          "q": 80,
+          "avg": 45.0,
+          "ctx": 8191
+        },
+        {
+          "id": "qwen/qwen-2.5-7b-instruct",
+          "name": "Qwen: Qwen2.5 7B Instruct",
+          "q": 75,
+          "avg": 0.15,
+          "ctx": 32768
+        },
+        {
+          "id": "qwen/qwen-2.5-72b-instruct",
+          "name": "Qwen2.5 72B Instruct",
+          "q": 75,
+          "avg": 0.38,
+          "ctx": 32768
+        }
+      ],
+      "best_value": [
+        {
+          "id": "mistralai/mistral-small-24b-instruct-2501",
+          "name": "Mistral: Mistral Small 3",
+          "q": 70,
+          "avg": 0.065,
+          "ctx": 32768
+        },
+        {
+          "id": "google/gemma-3n-e4b-it",
+          "name": "Google: Gemma 3n 4B",
+          "q": 70,
+          "avg": 0.09,
+          "ctx": 32768
+        },
+        {
+          "id": "gryphe/mythomax-l2-13b",
+          "name": "MythoMax 13B",
+          "q": 70,
+          "avg": 0.095,
+          "ctx": 8192
+        }
+      ],
+      "cheapest": [
+        {
+          "id": "mistralai/mistral-small-24b-instruct-2501",
+          "name": "Mistral: Mistral Small 3",
+          "q": 70,
+          "avg": 0.065,
+          "ctx": 32768
+        },
+        {
+          "id": "google/gemma-3n-e4b-it",
+          "name": "Google: Gemma 3n 4B",
+          "q": 70,
+          "avg": 0.09,
+          "ctx": 32768
+        },
+        {
+          "id": "gryphe/mythomax-l2-13b",
+          "name": "MythoMax 13B",
+          "q": 70,
+          "avg": 0.095,
+          "ctx": 8192
+        }
+      ]
+    }
+  }
+}

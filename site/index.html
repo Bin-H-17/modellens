@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模型筛 · 供应商中立的模型情报层</title>
+<style>
+  :root{--bg:#0b1020;--card:#121a30;--accent:#4f8cff;--txt:#e8edf7;--mut:#94a3b8}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,Segoe UI,Roboto,'PingFang SC',sans-serif;
+       background:radial-gradient(1200px 600px at 70% -10%,#1b2747,#0b1020 60%);color:var(--txt);line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:56px 20px 80px}
+  h1{font-size:38px;margin:0 0 8px;letter-spacing:-.5px}
+  .sub{color:var(--mut);font-size:17px;margin-bottom:28px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+  .tag{background:#1c2742;color:#9fc0ff;border:1px solid #2a3a63;border-radius:999px;padding:4px 12px;font-size:13px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:36px}
+  .card{background:var(--card);border:1px solid #223052;border-radius:14px;padding:20px}
+  .card h3{margin:0 0 8px;font-size:16px;color:#bcd4ff}
+  .card p{margin:0;color:var(--mut);font-size:14px}
+  .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+       padding:12px 22px;border-radius:10px;font-weight:600;margin-right:12px}
+  .cta.ghost{background:transparent;border:1px solid #2a3a63;color:#cfe0ff}
+  footer{color:var(--mut);font-size:13px;margin-top:40px}
+  code{background:#0e1730;padding:2px 6px;border-radius:6px;color:#9fe6c4}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📡 模型筛</h1>
+  <div class="sub">供应商中立的「模型情报 / 策略顾问层」——监控全网模型质量与价格漂移，每天给你分场景最佳配置。</div>
+  <div class="tags">
+    <span class="tag">非网关</span><span class="tag">开源 Apache-2.0</span>
+    <span class="tag">零配置</span><span class="tag">可回退</span><span class="tag">写回 Dify/LangGraph/n8n/otari</span>
+  </div>
+
+  <div class="cards">
+    <div class="card"><h3>① 雷达监控</h3><p>每日拉取 OpenRouter 全量模型真实价格，缓存快照，跨日对比价格 / 质量漂移。</p></div>
+    <div class="card"><h3>② 三档择优</h3><p>最优质 / 性价比 / 最划算，按任务域给可解释推荐，不替你拍板。</p></div>
+    <div class="card"><h3>③ 写回适配器</h3><p>把推荐一键映射为 Dify / LangGraph / n8n / otari 的模型配置；默认 dry-run，你授权才落地。</p></div>
+  </div>
+
+  <p>
+    <a class="cta" href="daily-radar-live.html">查看今日报告 →</a>
+    <a class="cta ghost" href="https://github.com/modelsieve/modellens" target="_blank" rel="noopener">GitHub</a>
+  </p>
+
+  <h3 style="color:#bcd4ff;margin-top:40px">30 秒本地跑通</h3>
+  <pre style="background:#0e1730;border:1px solid #223052;border-radius:10px;padding:16px;overflow:auto"><code>cd modellens
+python radar/snapshot.py --offline --json site/daily-radar-live.json --html site/daily-radar-live.html
+python adapters/dify/dify_writeback_adapter.py --radar data/sample-radar-report.json --tier best_value --app-id DEMO --dry-run
+python serve.py   # 打开 http://localhost:8000/</code></pre>
+
+  <footer>
+    质量分默认基于经验性启发式（仅演示）；提供 Artificial Analysis key 后即为真实独立评估。
+    本页为开源原型，验证「每天早起 模型筛已配好分场景最佳配置」是否有用。
+  </footer>
+</div>
+</body>
+</html>

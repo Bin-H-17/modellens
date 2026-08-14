@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-08-06 15:23 UTC",
+  "source": "OpenRouter /api/v1/models (live)",
+  "quality_note": "heuristic, not authoritative benchmark",
+  "tiers": {
+    "best_quality": [
+      {
+        "id": "anthropic/claude-opus-5-fast",
+        "name": "Claude Opus 5 (Fast)",
+        "q": 95,
+        "avg": 30.0,
+        "ctx": 1000000
+      },
+      {
+        "id": "anthropic/claude-opus-5",
+        "name": "Claude Opus 5",
+        "q": 95,
+        "avg": 15.0,
+        "ctx": 1000000
+      },
+      {
+        "id": "anthropic/claude-opus-5:batch",
+        "name": "Claude Opus 5 (batch)",
+        "q": 95,
+        "avg": 7.5,
+        "ctx": 1000000
+      },
+      {
+        "id": "anthropic/claude-opus-4.8-fast",
+        "name": "Anthropic: Claude Opus 4.8 (Fast)",
+        "q": 95,
+        "avg": 30.0,
+        "ctx": 1000000
+      },
+      {
+        "id": "anthropic/claude-opus-4.8",
+        "name": "Anthropic: Claude Opus 4.8",
+        "q": 95,
+        "avg": 15.0,
+        "ctx": 1000000
+      }
+    ],
+    "best_value": [
+      {
+        "id": "inclusionai/ling-2.6-flash",
+        "name": "inclusionAI: Ling-2.6-flash",
+        "q": 68,
+        "avg": 0.02,
+        "ctx": 262144
+      },
+      {
+        "id": "mistralai/mistral-nemo",
+        "name": "Mistral: Mistral Nemo",
+        "q": 70,
+        "avg": 0.0245,
+        "ctx": 131072
+      },
+      {
+        "id": "sao10k/l3-lunaris-8b",
+        "name": "Sao10K: Llama 3 8B Lunaris",
+        "q": 70,
+        "avg": 0.045,
+        "ctx": 8192
+      },
+      {
+        "id": "ibm-granite/granite-4.0-h-micro",
+        "name": "IBM: Granite 4.0 Micro",
+        "q": 70,
+        "avg": 0.0645,
+        "ctx": 131000
+      },
+      {
+        "id": "mistralai/mistral-small-24b-instruct-2501",
+        "name": "Mistral: Mistral Small 3",
+        "q": 70,
+        "avg": 0.065,
+        "ctx": 32768
+      }
+    ],
+    "cheapest": [
+      {
+        "id": "mistralai/mistral-nemo",
+        "name": "Mistral: Mistral Nemo",
+        "q": 70,
+        "avg": 0.0245,
+        "ctx": 131072
+      },
+      {
+        "id": "sao10k/l3-lunaris-8b",
+        "name": "Sao10K: Llama 3 8B Lunaris",
+        "q": 70,
+        "avg": 0.045,
+        "ctx": 8192
+      },
+      {
+        "id": "ibm-granite/granite-4.0-h-micro",
+        "name": "IBM: Granite 4.0 Micro",
+        "q": 70,
+        "avg": 0.0645,
+        "ctx": 131000
+      },
+      {
+        "id": "mistralai/mistral-small-24b-instruct-2501",
+        "name": "Mistral: Mistral Small 3",
+        "q": 70,
+        "avg": 0.065,
+        "ctx": 32768
+      },
+      {
+        "id": "meta-llama/llama-3.1-8b-instruct",
+        "name": "Meta: Llama 3.1 8B Instruct",
+        "q": 70,
+        "avg": 0.065,
+        "ctx": 131072
+      },
+      {
+        "id": "ibm-granite/granite-4.1-8b",
+        "name": "IBM: Granite 4.1 8B",
+        "q": 70,
+        "avg": 0.075,
+        "ctx": 131072
+      }
+    ]
+  }
+}
