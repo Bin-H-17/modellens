@@ -5,6 +5,8 @@
 >
 > **EN**: A vendor-neutral model-intelligence / strategy-advisor layer. Not a gateway — only **intelligence aggregation + tiered recommendation + writeback adapters**. Tracks quality/price drift across the model landscape and recommends three tiers per task; explainable, reversible, zero-config. Ask once, it aggregates multi-source intelligence and recommends.
 
+> **语言导航 · Language**: 本 README 采用逐节中英对照——每节内同时给出中文与 English，无独立语言分区。· This README is interleaved bilingual — every section carries 中文 and English side by side; there are no separate language sections.
+
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Live Report](https://img.shields.io/badge/daily%20report-Pages-success)](https://modelsieve.github.io/modellens/)
 
@@ -55,7 +57,7 @@ OpenRouter /api/v1/models  ──▶  radar/snapshot.py (统一每日入口)  �
 
 **EN**: `skill/modellens/` is a WorkBuddy skill. Ask "recommend a model / best value / best regardless of cost" and it auto-aggregates from platforms, forums, and authoritative benchmarks (prices, Artificial Analysis Intelligence Index, LMArena human preference, LiveBench, r/LocalLLaMA…), recommends by tier, and presents in the most readable form (table + one-line rationale + source links). Source details: `skill/modellens/references/sources.md`; output template: `references/output-template.md`.
 
-**安装 · Install**: 把 `skill/modellens/` 复制到你的 `~/.workbuddy/skills/modellens/`（用户级）或项目 `.workbuddy/skills/modellens/`（项目级）即可。
+**安装 · Install**: 把 `skill/modellens/` 复制到你的 `~/.workbuddy/skills/modellens/`（用户级）或项目 `.workbuddy/skills/modellens/`（项目级）即可。· Copy `skill/modellens/` to `~/.workbuddy/skills/modellens/` (user-level) or `.workbuddy/skills/modellens/` (project-level).
 
 ---
 
@@ -63,26 +65,32 @@ OpenRouter /api/v1/models  ──▶  radar/snapshot.py (统一每日入口)  �
 
 ```bash
 # 1. 生成报告 + 快照（联网；或用 --offline 走缓存，完全离线）
+#    Generate report + snapshot (online; use --offline to run fully offline via cache)
 python radar/snapshot.py --json site/daily-radar-live.json --html site/daily-radar-live.html
-#    （离线示例）python radar/snapshot.py --offline --html site/daily-radar-live.html
+#    （离线示例 · Offline example）python radar/snapshot.py --offline --html site/daily-radar-live.html
 
 # 2. 跨日漂移对比（默认取 data/snapshots 最近两份）
+#    Cross-day drift diff (defaults to the two most recent snapshots in data/snapshots)
 python radar/diff.py --md data/drift.md
 
 # 3. 写回适配器（dry-run 默认，不调用任何远程 API）
+#    Writeback adapters (dry-run by default; makes no remote API calls)
 python adapters/dify/dify_writeback_adapter.py --radar data/sample-radar-report.json --tier best_value --app-id DEMO --dry-run
 python adapters/langgraph/langgraph_writeback_adapter.py --radar data/sample-radar-report.json --tier best_quality
 python adapters/n8n/n8n_writeback_adapter.py --radar data/sample-radar-report.json --tier best_value
 python adapters/otari/otari_writeback_adapter.py --radar data/sample-radar-report.json --tier cheapest
 
 # 4. 测试 & 本地预览
+#    Tests & local preview
 python -m pytest tests/ -q
-python serve.py   # 打开 http://localhost:8000/
+python serve.py   # 打开 http://localhost:8000/  · open http://localhost:8000/
 
 # 5. 任务域细分档位（P2）：每个任务域独立三档 → site/domains.json
+#    Per-task-domain tiers (P2): independent three tiers per domain → site/domains.json
 python radar/snapshot.py --offline --domains site/domains.json
 
 # 6. 历史漂移可视化（P2）：生成自包含 SVG 趋势图（需 ≥2 份历史快照）
+#    Historical drift viz (P2): self-contained SVG trend chart (needs ≥2 historical snapshots)
 python radar/visualize.py --out site/drift-chart.svg
 ```
 
