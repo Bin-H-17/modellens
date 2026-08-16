@@ -1,3 +1,3 @@
 # 测试依赖 · Test dependencies
 # 运行时零第三方依赖（仅用 Python 标准库）· Zero runtime deps (stdlib only)
-pytest>=7.4,<9
+pytest>=9.1.1,<10
