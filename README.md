@@ -7,6 +7,7 @@
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Live Report](https://img.shields.io/badge/daily%20report-Pages-success)](https://modelsieve.github.io/modellens/)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Bin-H-17/modellens/badge)](https://securityscorecards.dev/viewer/?uri=github.com/Bin-H-17/modellens)
 
 ---
 
