@@ -15,6 +15,7 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     permissions:
+      contents: read      # job-level perms REPLACE top-level ones; checkout needs this
       security-events: write
     strategy:
       fail-fast: false
