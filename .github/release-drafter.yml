@@ -17,3 +17,6 @@ version-resolver:
   patch:
     labels: ['patch', 'fix', 'bugfix', 'bug', 'chore', 'dependencies']
   default: patch
+template: |
+  ## What's Changed
+  $CHANGES
