@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18 01:05 UTC",
+  "generated_at": "2026-09-19 01:00 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -114,11 +114,11 @@
         "ctx": 131072
       },
       {
-        "id": "google/gemma-3-4b-it",
-        "name": "Google: Gemma 3 4B",
-        "q": 70,
-        "avg": 0.075,
-        "ctx": 131072
+        "id": "deepseek/deepseek-v4-flash",
+        "name": "DeepSeek: DeepSeek V4 Flash 0423",
+        "q": 75,
+        "avg": 0.0727,
+        "ctx": 1048576
       }
     ]
   }

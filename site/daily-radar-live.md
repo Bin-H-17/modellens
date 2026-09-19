@@ -1,6 +1,6 @@
 # 📡 模型筛 · 每日最佳模型配置（实时版）
 
-生成时间：2026-09-18 01:05 UTC ｜ 数据源：OpenRouter（445 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
+生成时间：2026-09-19 01:00 UTC ｜ 数据源：OpenRouter（446 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
 
 ⚠️ 质量分来源：启发式（经验性，非权威 benchmark）。提供 Artificial Analysis key 后为真实评估。
 
@@ -28,4 +28,4 @@
 | IBM: Granite 4.0 Micro | ibm-granite/granite-4.0-h-micro | 70 | $0.065 | 131,000 |
 | Mistral: Mistral Small 3 | mistralai/mistral-small-24b-instruct-2501 | 70 | $0.065 | 32,768 |
 | Meta: Llama 3.1 8B Instruct | meta-llama/llama-3.1-8b-instruct | 70 | $0.065 | 131,072 |
-| Google: Gemma 3 4B | google/gemma-3-4b-it | 70 | $0.075 | 131,072 |
+| DeepSeek: DeepSeek V4 Flash 0423 | deepseek/deepseek-v4-flash | 75 | $0.073 | 1,048,576 |
