@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20 00:45 UTC",
+  "generated_at": "2026-09-21 00:53 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -63,18 +63,18 @@
         "ctx": 8192
       },
       {
-        "id": "deepseek/deepseek-v4-flash",
-        "name": "DeepSeek: DeepSeek V4 Flash 0423",
-        "q": 75,
-        "avg": 0.0563,
-        "ctx": 1048576
+        "id": "ibm-granite/granite-4.0-h-micro",
+        "name": "IBM: Granite 4.0 Micro",
+        "q": 70,
+        "avg": 0.0645,
+        "ctx": 131000
       },
       {
-        "id": "~deepseek/deepseek-v4-flash-latest",
-        "name": "DeepSeek: DeepSeek V4 Flash Latest",
-        "q": 75,
-        "avg": 0.06,
-        "ctx": 1310720
+        "id": "mistralai/mistral-small-24b-instruct-2501",
+        "name": "Mistral: Mistral Small 3",
+        "q": 70,
+        "avg": 0.065,
+        "ctx": 32768
       }
     ],
     "cheapest": [
@@ -93,32 +93,32 @@
         "ctx": 8192
       },
       {
-        "id": "deepseek/deepseek-v4-flash",
-        "name": "DeepSeek: DeepSeek V4 Flash 0423",
-        "q": 75,
-        "avg": 0.0563,
-        "ctx": 1048576
-      },
-      {
-        "id": "~deepseek/deepseek-v4-flash-latest",
-        "name": "DeepSeek: DeepSeek V4 Flash Latest",
-        "q": 75,
-        "avg": 0.06,
-        "ctx": 1310720
-      },
-      {
-        "id": "deepseek/deepseek-v4-flash-0731",
-        "name": "DeepSeek: DeepSeek V4 Flash 0731",
-        "q": 75,
-        "avg": 0.06,
-        "ctx": 1310720
-      },
-      {
         "id": "ibm-granite/granite-4.0-h-micro",
         "name": "IBM: Granite 4.0 Micro",
         "q": 70,
         "avg": 0.0645,
         "ctx": 131000
+      },
+      {
+        "id": "mistralai/mistral-small-24b-instruct-2501",
+        "name": "Mistral: Mistral Small 3",
+        "q": 70,
+        "avg": 0.065,
+        "ctx": 32768
+      },
+      {
+        "id": "meta-llama/llama-3.1-8b-instruct",
+        "name": "Meta: Llama 3.1 8B Instruct",
+        "q": 70,
+        "avg": 0.065,
+        "ctx": 131072
+      },
+      {
+        "id": "google/gemma-3-4b-it",
+        "name": "Google: Gemma 3 4B",
+        "q": 70,
+        "avg": 0.075,
+        "ctx": 131072
       }
     ]
   }
