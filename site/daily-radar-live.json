@@ -1,9 +1,23 @@
 {
-  "generated_at": "2026-09-22 01:28 UTC",
+  "generated_at": "2026-09-23 01:17 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
     "best_quality": [
+      {
+        "id": "anthropic/claude-opus-5.5",
+        "name": "Anthropic: Claude Opus 5.5",
+        "q": 95,
+        "avg": 12.0,
+        "ctx": 1000000
+      },
+      {
+        "id": "anthropic/claude-opus-5.5:batch",
+        "name": "Anthropic: Claude Opus 5.5 (batch)",
+        "q": 95,
+        "avg": 6.0,
+        "ctx": 1000000
+      },
       {
         "id": "anthropic/claude-opus-5",
         "name": "Anthropic: Claude Opus 5",
@@ -21,20 +35,6 @@
       {
         "id": "anthropic/claude-opus-4.8",
         "name": "Anthropic: Claude Opus 4.8",
-        "q": 95,
-        "avg": 15.0,
-        "ctx": 1000000
-      },
-      {
-        "id": "anthropic/claude-opus-4.8:batch",
-        "name": "Anthropic: Claude Opus 4.8 (batch)",
-        "q": 95,
-        "avg": 7.5,
-        "ctx": 1000000
-      },
-      {
-        "id": "~anthropic/claude-opus-latest",
-        "name": "Anthropic: Claude Opus Latest",
         "q": 95,
         "avg": 15.0,
         "ctx": 1000000
@@ -63,18 +63,18 @@
         "ctx": 8192
       },
       {
+        "id": "openai/gpt-oss-20b",
+        "name": "OpenAI: gpt-oss-20b",
+        "q": 70,
+        "avg": 0.054,
+        "ctx": 131072
+      },
+      {
         "id": "ibm-granite/granite-4.0-h-micro",
         "name": "IBM: Granite 4.0 Micro",
         "q": 70,
         "avg": 0.0645,
         "ctx": 131000
-      },
-      {
-        "id": "mistralai/mistral-small-24b-instruct-2501",
-        "name": "Mistral: Mistral Small 3",
-        "q": 70,
-        "avg": 0.065,
-        "ctx": 32768
       }
     ],
     "cheapest": [
@@ -91,6 +91,13 @@
         "q": 70,
         "avg": 0.045,
         "ctx": 8192
+      },
+      {
+        "id": "openai/gpt-oss-20b",
+        "name": "OpenAI: gpt-oss-20b",
+        "q": 70,
+        "avg": 0.054,
+        "ctx": 131072
       },
       {
         "id": "ibm-granite/granite-4.0-h-micro",
@@ -111,13 +118,6 @@
         "name": "Meta: Llama 3.1 8B Instruct",
         "q": 70,
         "avg": 0.065,
-        "ctx": 131072
-      },
-      {
-        "id": "google/gemma-3-4b-it",
-        "name": "Google: Gemma 3 4B",
-        "q": 70,
-        "avg": 0.075,
         "ctx": 131072
       }
     ]
