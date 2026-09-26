@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25 01:11 UTC",
+  "generated_at": "2026-09-26 01:14 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -49,6 +49,13 @@
         "ctx": 131072
       },
       {
+        "id": "inclusionai/ling-3.0-flash-vl",
+        "name": "inclusionAI: Ling 3.0 Flash VL",
+        "q": 68,
+        "avg": 0.0413,
+        "ctx": 262144
+      },
+      {
         "id": "inclusionai/ling-3.0-flash",
         "name": "inclusionAI: Ling 3.0 Flash",
         "q": 68,
@@ -68,13 +75,6 @@
         "q": 70,
         "avg": 0.054,
         "ctx": 131072
-      },
-      {
-        "id": "ibm-granite/granite-4.0-h-micro",
-        "name": "IBM: Granite 4.0 Micro",
-        "q": 70,
-        "avg": 0.0645,
-        "ctx": 131000
       }
     ],
     "cheapest": [
