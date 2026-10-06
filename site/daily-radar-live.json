@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05 01:41 UTC",
+  "generated_at": "2026-10-06 02:43 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -86,13 +86,6 @@
         "ctx": 1000000
       },
       {
-        "id": "stealth/space-bunny-alpha",
-        "name": "Space Bunny Alpha",
-        "q": 70,
-        "avg": 0.0,
-        "ctx": 1000000
-      },
-      {
         "id": "mistralai/mistral-nemo",
         "name": "Mistral: Mistral Nemo",
         "q": 70,
@@ -119,6 +112,13 @@
         "q": 70,
         "avg": 0.0645,
         "ctx": 131000
+      },
+      {
+        "id": "mistralai/mistral-small-24b-instruct-2501",
+        "name": "Mistral: Mistral Small 3",
+        "q": 70,
+        "avg": 0.065,
+        "ctx": 32768
       }
     ]
   }

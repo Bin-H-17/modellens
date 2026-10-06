@@ -1,6 +1,6 @@
 # 📡 模型筛 · 每日最佳模型配置（实时版）
 
-生成时间：2026-10-05 01:41 UTC ｜ 数据源：OpenRouter（466 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
+生成时间：2026-10-06 02:43 UTC ｜ 数据源：OpenRouter（464 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
 
 ⚠️ 质量分来源：启发式（经验性，非权威 benchmark）。提供 Artificial Analysis key 后为真实评估。
 
@@ -24,8 +24,8 @@
 | 名称 | ID | 质量分 | 价格(avg/MTok) | 上下文 |
 |---|---|---|---|---|
 | NVIDIA: Switchyard | nvidia/switchyard | 70 | $-1000000.000 | 1,000,000 |
-| Space Bunny Alpha | stealth/space-bunny-alpha | 70 | FREE | 1,000,000 |
 | Mistral: Mistral Nemo | mistralai/mistral-nemo | 70 | $0.025 | 131,072 |
 | Sao10K: Llama 3 8B Lunaris | sao10k/l3-lunaris-8b | 70 | $0.045 | 8,192 |
 | OpenAI: gpt-oss-20b | openai/gpt-oss-20b | 70 | $0.054 | 131,072 |
 | IBM: Granite 4.0 Micro | ibm-granite/granite-4.0-h-micro | 70 | $0.065 | 131,000 |
+| Mistral: Mistral Small 3 | mistralai/mistral-small-24b-instruct-2501 | 70 | $0.065 | 32,768 |
