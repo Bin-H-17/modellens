@@ -1,6 +1,6 @@
 # 📡 模型筛 · 每日最佳模型配置（实时版）
 
-生成时间：2026-10-09 02:49 UTC ｜ 数据源：OpenRouter（469 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
+生成时间：2026-10-10 02:09 UTC ｜ 数据源：OpenRouter（458 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
 
 ⚠️ 质量分来源：启发式（经验性，非权威 benchmark）。提供 Artificial Analysis key 后为真实评估。
 
