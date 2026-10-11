@@ -21,7 +21,7 @@
 - [ ] ⛔ 问卷分发（H1：是否每日看报告；H2：是否愿写回）— `docs/interview-questionnaire.md` + `launch/distribution.md`
 - [ ] 回收后更新 PRD 优先级（`docs/strategy/mvp-prd.md`）
 
-## Phase 3 · 深化护城河（可自主推进）
+## Phase 3 · 深化核心能力（可自主推进）
 - [x] 任务域细分档位（`radar/domains.py`）：coding / reasoning / long-context / multimodal / general 各自独立三档（启发式分桶；真实能力以 LMArena / AA 分任务榜为准，见技能）
 - [x] 历史漂移可视化（`radar/visualize.py`）：自包含 SVG 价格趋势图（需 ≥2 份历史快照，否则提示累积）
 - [ ] LangGraph / n8n / otari「真实 apply」路径（如 otari 有 config API 可补实写）

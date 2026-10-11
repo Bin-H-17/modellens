@@ -21,9 +21,9 @@ description: >-
 
 ## 核心定位 · Positioning
 
-- **白空间**：情报层 + 写回适配器。网关/路由（OmniRoute、LiteLLM、otari）已是红海，我们不重复造。
+- **白空间**：情报层 + 写回适配器。网关/路由（OmniRoute、LiteLLM、otari）已是红海，本项目不重复造。
 - **可解释、可回退**：每个推荐都给出来源链接与一句话理由；用户随时知道"为什么选它"，且能改回。
-- **永远标注权威性**：实时价格来自 OpenRouter（可靠）；质量分优先用 Artificial Analysis / LMArena，
+- **始终标注权威性**：实时价格来自 OpenRouter（可靠）；质量分优先用 Artificial Analysis / LMArena，
   否则明确标注"启发式/社区信号，非权威 benchmark"。
 
 ## 数据源矩阵 · Source matrix
@@ -64,7 +64,7 @@ description: >-
 **4. 呈现 · Present**
 - 严格使用 `references/output-template.md` 的易读模板（表格 + 一句话总结 + 免责声明）。
 - 默认输出 Markdown 表格；若用户要"看"而非"读"，可用 Visualizer 渲染对比卡片。
-- **永远附**：① 数据时间/来源；② "建议在你的真实任务上再做 20 条私有评测" 的提醒。
+- **始终附**：① 数据时间/来源；② "建议在你的真实任务上再做 20 条私有评测" 的提醒。
 
 ## 边界与免责 · Caveats
 
