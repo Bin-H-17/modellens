@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13 03:23 UTC",
+  "generated_at": "2026-10-14 01:39 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -42,18 +42,25 @@
     ],
     "best_value": [
       {
+        "id": "scaledown/summarize",
+        "name": "ScaleDown: Summarize",
+        "q": 70,
+        "avg": 0.02,
+        "ctx": 1000000
+      },
+      {
+        "id": "scaledown/extract",
+        "name": "ScaleDown: Extract",
+        "q": 70,
+        "avg": 0.02,
+        "ctx": 1000000
+      },
+      {
         "id": "mistralai/mistral-nemo",
         "name": "Mistral: Mistral Nemo",
         "q": 70,
         "avg": 0.0295,
         "ctx": 131072
-      },
-      {
-        "id": "inclusionai/ling-3.0-flash-vl",
-        "name": "inclusionAI: Ling 3.0 Flash VL",
-        "q": 68,
-        "avg": 0.0413,
-        "ctx": 262144
       },
       {
         "id": "inclusionai/ling-3.0-flash",
@@ -68,13 +75,6 @@
         "q": 70,
         "avg": 0.045,
         "ctx": 8192
-      },
-      {
-        "id": "openai/gpt-oss-20b",
-        "name": "OpenAI: gpt-oss-20b",
-        "q": 70,
-        "avg": 0.054,
-        "ctx": 131072
       }
     ],
     "cheapest": [
@@ -83,6 +83,20 @@
         "name": "NVIDIA: Switchyard",
         "q": 70,
         "avg": -1000000.0,
+        "ctx": 1000000
+      },
+      {
+        "id": "scaledown/summarize",
+        "name": "ScaleDown: Summarize",
+        "q": 70,
+        "avg": 0.02,
+        "ctx": 1000000
+      },
+      {
+        "id": "scaledown/extract",
+        "name": "ScaleDown: Extract",
+        "q": 70,
+        "avg": 0.02,
         "ctx": 1000000
       },
       {
@@ -105,20 +119,6 @@
         "q": 70,
         "avg": 0.054,
         "ctx": 131072
-      },
-      {
-        "id": "ibm-granite/granite-4.0-h-micro",
-        "name": "IBM: Granite 4.0 Micro",
-        "q": 70,
-        "avg": 0.0645,
-        "ctx": 131000
-      },
-      {
-        "id": "mistralai/mistral-small-24b-instruct-2501",
-        "name": "Mistral: Mistral Small 3",
-        "q": 70,
-        "avg": 0.065,
-        "ctx": 32768
       }
     ]
   }
