@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26 01:01 UTC",
+  "generated_at": "2026-10-27 01:51 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -56,6 +56,13 @@
         "ctx": 1000000
       },
       {
+        "id": "~deepseek/deepseek-flash-latest",
+        "name": "DeepSeek: DeepSeek Flash Latest",
+        "q": 74,
+        "avg": 0.0225,
+        "ctx": 1048576
+      },
+      {
         "id": "mistralai/mistral-nemo",
         "name": "Mistral: Mistral Nemo",
         "q": 70,
@@ -68,13 +75,6 @@
         "q": 68,
         "avg": 0.042,
         "ctx": 262144
-      },
-      {
-        "id": "google/gemma-3-4b-it",
-        "name": "Google: Gemma 3 4B",
-        "q": 70,
-        "avg": 0.045,
-        "ctx": 131072
       }
     ],
     "cheapest": [
@@ -100,6 +100,13 @@
         "ctx": 1000000
       },
       {
+        "id": "~deepseek/deepseek-flash-latest",
+        "name": "DeepSeek: DeepSeek Flash Latest",
+        "q": 74,
+        "avg": 0.0225,
+        "ctx": 1048576
+      },
+      {
         "id": "mistralai/mistral-nemo",
         "name": "Mistral: Mistral Nemo",
         "q": 70,
@@ -112,13 +119,6 @@
         "q": 70,
         "avg": 0.045,
         "ctx": 131072
-      },
-      {
-        "id": "sao10k/l3-lunaris-8b",
-        "name": "Sao10K: Llama 3 8B Lunaris",
-        "q": 70,
-        "avg": 0.045,
-        "ctx": 8192
       }
     ]
   }

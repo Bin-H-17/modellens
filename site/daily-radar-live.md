@@ -1,6 +1,6 @@
 # 📡 模型筛 · 每日最佳模型配置（实时版）
 
-生成时间：2026-10-26 01:01 UTC ｜ 数据源：OpenRouter（467 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
+生成时间：2026-10-27 01:51 UTC ｜ 数据源：OpenRouter（464 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
 
 ⚠️ 质量分来源：启发式（经验性，非权威 benchmark）。提供 Artificial Analysis key 后为真实评估。
 
@@ -17,15 +17,15 @@
 |---|---|---|---|---|
 | ScaleDown: Summarize | scaledown/summarize | 70 | $0.020 | 1,000,000 |
 | ScaleDown: Extract | scaledown/extract | 70 | $0.020 | 1,000,000 |
+| DeepSeek: DeepSeek Flash Latest | ~deepseek/deepseek-flash-latest | 74 | $0.022 | 1,048,576 |
 | Mistral: Mistral Nemo | mistralai/mistral-nemo | 70 | $0.029 | 131,072 |
 | inclusionAI: Ling 3.0 Flash | inclusionai/ling-3.0-flash | 68 | $0.042 | 262,144 |
-| Google: Gemma 3 4B | google/gemma-3-4b-it | 70 | $0.045 | 131,072 |
 ### 档位三 · 最划算小/批量
 | 名称 | ID | 质量分 | 价格(avg/MTok) | 上下文 |
 |---|---|---|---|---|
 | NVIDIA: Switchyard | nvidia/switchyard | 70 | $-1000000.000 | 1,000,000 |
 | ScaleDown: Summarize | scaledown/summarize | 70 | $0.020 | 1,000,000 |
 | ScaleDown: Extract | scaledown/extract | 70 | $0.020 | 1,000,000 |
+| DeepSeek: DeepSeek Flash Latest | ~deepseek/deepseek-flash-latest | 74 | $0.022 | 1,048,576 |
 | Mistral: Mistral Nemo | mistralai/mistral-nemo | 70 | $0.029 | 131,072 |
 | Google: Gemma 3 4B | google/gemma-3-4b-it | 70 | $0.045 | 131,072 |
-| Sao10K: Llama 3 8B Lunaris | sao10k/l3-lunaris-8b | 70 | $0.045 | 8,192 |
