@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01 01:55 UTC",
+  "generated_at": "2026-11-02 02:08 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -63,11 +63,11 @@
         "ctx": 131072
       },
       {
-        "id": "~deepseek/deepseek-flash-latest",
-        "name": "DeepSeek: DeepSeek Flash Latest",
-        "q": 74,
-        "avg": 0.0387,
-        "ctx": 1048576
+        "id": "google/gemma-4-26b-a4b-it",
+        "name": "Google: Gemma 4 26B A4B ",
+        "q": 70,
+        "avg": 0.0415,
+        "ctx": 262144
       },
       {
         "id": "inclusionai/ling-3.0-flash",
@@ -107,11 +107,11 @@
         "ctx": 131072
       },
       {
-        "id": "~deepseek/deepseek-flash-latest",
-        "name": "DeepSeek: DeepSeek Flash Latest",
-        "q": 74,
-        "avg": 0.0387,
-        "ctx": 1048576
+        "id": "google/gemma-4-26b-a4b-it",
+        "name": "Google: Gemma 4 26B A4B ",
+        "q": 70,
+        "avg": 0.0415,
+        "ctx": 262144
       },
       {
         "id": "sao10k/l3-lunaris-8b",
