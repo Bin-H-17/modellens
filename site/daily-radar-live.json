@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03 03:51 UTC",
+  "generated_at": "2026-11-04 02:56 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -86,6 +86,13 @@
         "ctx": 1000000
       },
       {
+        "id": "stealth/crouton-alpha",
+        "name": "Crouton Alpha",
+        "q": 70,
+        "avg": 0.0,
+        "ctx": 1048576
+      },
+      {
         "id": "scaledown/summarize",
         "name": "ScaleDown: Summarize",
         "q": 70,
@@ -112,13 +119,6 @@
         "q": 70,
         "avg": 0.045,
         "ctx": 8192
-      },
-      {
-        "id": "mistralai/mistral-small-24b-instruct-2501",
-        "name": "Mistral: Mistral Small 3",
-        "q": 70,
-        "avg": 0.065,
-        "ctx": 32768
       }
     ]
   }
