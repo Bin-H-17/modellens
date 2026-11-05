@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04 02:56 UTC",
+  "generated_at": "2026-11-05 03:15 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -63,18 +63,18 @@
         "ctx": 131072
       },
       {
+        "id": "openai/gpt-oss-120b",
+        "name": "OpenAI: gpt-oss-120b",
+        "q": 70,
+        "avg": 0.033,
+        "ctx": 131072
+      },
+      {
         "id": "inclusionai/ling-3.0-flash",
         "name": "inclusionAI: Ling 3.0 Flash",
         "q": 68,
         "avg": 0.042,
         "ctx": 262144
-      },
-      {
-        "id": "sao10k/l3-lunaris-8b",
-        "name": "Sao10K: Llama 3 8B Lunaris",
-        "q": 70,
-        "avg": 0.045,
-        "ctx": 8192
       }
     ],
     "cheapest": [
@@ -114,11 +114,11 @@
         "ctx": 131072
       },
       {
-        "id": "sao10k/l3-lunaris-8b",
-        "name": "Sao10K: Llama 3 8B Lunaris",
+        "id": "openai/gpt-oss-120b",
+        "name": "OpenAI: gpt-oss-120b",
         "q": 70,
-        "avg": 0.045,
-        "ctx": 8192
+        "avg": 0.033,
+        "ctx": 131072
       }
     ]
   }
