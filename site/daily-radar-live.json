@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05 03:15 UTC",
+  "generated_at": "2026-11-06 03:15 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -56,17 +56,17 @@
         "ctx": 1000000
       },
       {
+        "id": "inclusionai/ling-3.0-tiny",
+        "name": "inclusionAI: Ling 3.0 Tiny",
+        "q": 78,
+        "avg": 0.03,
+        "ctx": 262144
+      },
+      {
         "id": "mistralai/mistral-nemo",
         "name": "Mistral: Mistral Nemo",
         "q": 70,
         "avg": 0.0295,
-        "ctx": 131072
-      },
-      {
-        "id": "openai/gpt-oss-120b",
-        "name": "OpenAI: gpt-oss-120b",
-        "q": 70,
-        "avg": 0.033,
         "ctx": 131072
       },
       {
@@ -114,11 +114,11 @@
         "ctx": 131072
       },
       {
-        "id": "openai/gpt-oss-120b",
-        "name": "OpenAI: gpt-oss-120b",
-        "q": 70,
-        "avg": 0.033,
-        "ctx": 131072
+        "id": "inclusionai/ling-3.0-tiny",
+        "name": "inclusionAI: Ling 3.0 Tiny",
+        "q": 78,
+        "avg": 0.03,
+        "ctx": 262144
       }
     ]
   }
