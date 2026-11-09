@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08 02:05 UTC",
+  "generated_at": "2026-11-09 02:25 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -70,10 +70,10 @@
         "ctx": 131072
       },
       {
-        "id": "openai/gpt-oss-120b",
-        "name": "OpenAI: gpt-oss-120b",
+        "id": "meta-llama/llama-3.1-8b-instruct",
+        "name": "Meta: Llama 3.1 8B Instruct",
         "q": 70,
-        "avg": 0.0375,
+        "avg": 0.03,
         "ctx": 131072
       }
     ],

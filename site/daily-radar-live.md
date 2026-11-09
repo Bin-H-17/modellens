@@ -1,6 +1,6 @@
 # 📡 模型筛 · 每日最佳模型配置（实时版）
 
-生成时间：2026-11-08 02:05 UTC ｜ 数据源：OpenRouter（460 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
+生成时间：2026-11-09 02:25 UTC ｜ 数据源：OpenRouter（461 模型）｜ 质量分来源：启发式（经验性，非权威 benchmark）
 
 ⚠️ 质量分来源：启发式（经验性，非权威 benchmark）。提供 Artificial Analysis key 后为真实评估。
 
@@ -19,7 +19,7 @@
 | ScaleDown: Extract | scaledown/extract | 70 | $0.020 | 1,000,000 |
 | inclusionAI: Ling 3.0 Tiny | inclusionai/ling-3.0-tiny | 78 | $0.030 | 262,144 |
 | Mistral: Mistral Nemo | mistralai/mistral-nemo | 70 | $0.029 | 131,072 |
-| OpenAI: gpt-oss-120b | openai/gpt-oss-120b | 70 | $0.037 | 131,072 |
+| Meta: Llama 3.1 8B Instruct | meta-llama/llama-3.1-8b-instruct | 70 | $0.030 | 131,072 |
 ### 档位三 · 最划算小/批量
 | 名称 | ID | 质量分 | 价格(avg/MTok) | 上下文 |
 |---|---|---|---|---|
