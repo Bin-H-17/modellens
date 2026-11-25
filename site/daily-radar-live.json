@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 06:48 UTC",
+  "generated_at": "2026-11-25 05:15 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -70,11 +70,11 @@
         "ctx": 131072
       },
       {
-        "id": "google/gemma-3-4b-it",
-        "name": "Google: Gemma 3 4B",
-        "q": 70,
-        "avg": 0.045,
-        "ctx": 131072
+        "id": "upstage/solar-mini-4-5",
+        "name": "Upstage: Solar Mini 4.5 (Preview)",
+        "q": 58,
+        "avg": 0.025,
+        "ctx": 524288
       }
     ],
     "cheapest": [
