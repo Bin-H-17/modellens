@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25 05:15 UTC",
+  "generated_at": "2026-11-26 04:43 UTC",
   "source": "OpenRouter /api/v1/models (live)",
   "quality_source": "启发式（经验性，非权威 benchmark）",
   "tiers": {
@@ -79,6 +79,13 @@
     ],
     "cheapest": [
       {
+        "id": "~unbiased/pareto-latest",
+        "name": "Pareto Latest",
+        "q": 70,
+        "avg": -1000000.0,
+        "ctx": 262144
+      },
+      {
         "id": "nvidia/switchyard",
         "name": "NVIDIA: Switchyard",
         "q": 70,
@@ -112,13 +119,6 @@
         "q": 78,
         "avg": 0.03,
         "ctx": 262144
-      },
-      {
-        "id": "google/gemma-3-4b-it",
-        "name": "Google: Gemma 3 4B",
-        "q": 70,
-        "avg": 0.045,
-        "ctx": 131072
       }
     ]
   }
